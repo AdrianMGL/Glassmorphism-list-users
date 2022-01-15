@@ -7,35 +7,73 @@
   font-family: "Poppins", "sans-serif";
 }
 
+:root {
+  --text-gray: rgba(255, 255, 255, 0.2);
+
+  --color-card-blue: #74b9ff;
+  --color-card-yellow: #ffd32a;
+  --color-card-red: #f53b57;
+}
+
+/* ****************** GLOBAL CLASSES  ******************** */
+.text-gray {
+  color: var(--text-gray);
+  z-index: 1000;
+}
+
+.font-poppins {
+  font-family: var(--font-poppins);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.pb-5 {
+  padding-bottom: 1.5rem;
+}
+
+body {
+  background: #9a6815;
+  background: -webkit-linear-gradient(bottom, #9a6815, #a9be9f);
+  background: -moz-linear-gradient(bottom, #9a6815, #a9be9f);
+  background: linear-gradient(to top, #9a6815, #a9be9f);
+
+  /* background: #E6EBAA;
+background: -webkit-linear-gradient(bottom, #E6EBAA, #02ADA8);
+background: -moz-linear-gradient(bottom, #E6EBAA, #02ADA8);
+background: linear-gradient(to top, #E6EBAA, #02ADA8); */
+}
+
 section {
   position: relative;
-  background: #161623;
   min-height: 100vh;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: -50px;
 }
 
 section::before {
   content: "";
   position: absolute;
-  width: 400px;
-  height: 400px;
-  background: linear-gradient(#ffc107, #e91e63);
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(#ffc10770, #e91e6290); /* (#ffc107, #e91e63)*/
   border-radius: 50%;
-  transform: translate(-250px, -120px);
+  transform: translate(-150px, 200px);
 }
 
 /*  */
 section::after {
   content: "";
   position: absolute;
-  width: 350px;
-  height: 350px;
-  background: linear-gradient(#2196f3, #31ff38);
+  width: 250px;
+  height: 250px;
+  background: linear-gradient(#2195f340, #31ff38bd);
   border-radius: 50%;
-  transform: translate(250px, 120px);
+  transform: translate(120px, -190px);
 }
 
 .box {
@@ -55,15 +93,9 @@ section::after {
 
 .box h3 {
   color: #fff;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  text-align: center;
 }
-
-/* .box .imgBx img {
-  width: 100px;
-  height: 50px;
-  border-radius: 5px;
-  object-fit: cover;
-} */
 
 .box .list {
   position: relative;
